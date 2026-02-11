@@ -1,0 +1,10 @@
+/* Header component styles */
+.site-header{
+  padding: 12px 0;
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(180deg,var(--primary), #ff9b4a);box-shadow:inset -4px -4px 8px rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+.site-title{font-size:18px;font-weight:700}
+.cart{display:flex;align-items:center;gap:8px}
+.cart .cart-count{background:var(--accent);color:white;border-radius:999px;padding:4px 7px;font-size:12px;font-weight:700}

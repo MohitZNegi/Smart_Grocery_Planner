@@ -1,0 +1,5 @@
+.category-filter .panel{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:12px}
+.category-filter h3{font-size:16px}
+.category-filter p{color:var(--muted);margin:0}
+.category-filter .chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{background:linear-gradient(180deg,#fff,#fff);padding:6px 10px;border-radius:999px;border:1px solid rgba(0,0,0,0.04);font-weight:600}

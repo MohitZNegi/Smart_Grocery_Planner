@@ -1,0 +1,6 @@
+.grocery-list .panel{display:flex;flex-direction:column;gap:10px;padding:12px;border-radius:12px}
+.grocery-list .muted{color:var(--muted)}
+.grocery-list .items{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.grocery-list .item{display:flex;align-items:center;justify-content:space-between;padding:10px;border-radius:10px}
+.grocery-list .item .meta{font-size:14px;color:var(--muted)}
+.grocery-list .item .price{font-weight:700;color:var(--primary)}

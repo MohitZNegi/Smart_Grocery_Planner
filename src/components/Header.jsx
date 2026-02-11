@@ -1,20 +1,19 @@
 import React from "react";
+import "./Header.css";
 
 const Header = () => {
   return (
-    <header
-      style={{ background: "var(--primary)", color: "#fff", padding: 16 }}
-    >
-      <div
-        className="container"
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <h1 style={{ margin: 0, fontSize: 20 }}>Smart Grocery Planner</h1>
-        <div>Cart: 0</div>
+    <header className="site-header">
+      <div className="container header-inner">
+        <div className="brand">
+          <div className="logo">SG</div>
+          <h1 className="site-title">Smart Grocery Planner</h1>
+        </div>
+
+        <div className="cart">
+          <span className="icon">🛒</span>
+          <span className="cart-count">0</span>
+        </div>
       </div>
     </header>
   );

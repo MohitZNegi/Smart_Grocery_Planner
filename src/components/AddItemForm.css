@@ -1,0 +1,5 @@
+.add-item .card{max-width:720px;margin:0 auto}
+.add-item h2{font-size:20px;margin-bottom:6px}
+.add-item p{color:var(--muted)}
+.add-item .form-row{display:flex;gap:8px;margin-top:8px}
+.add-item .input{padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);flex:1}
