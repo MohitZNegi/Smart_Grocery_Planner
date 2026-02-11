@@ -38,10 +38,17 @@ const grocerySlice = createSlice({
 
     // Toggle purchase status
     togglePurchased: (state, action) => {
+        const item = state.items.find((item) => item.id === action.payload);
+        if (item) {
+          item.isPurchased = !item.isPurchased;
+        }
     },
 
     // Update quantity
     updateQuantity: (state, action) => {
+        const item = state.items.find((item) => item.id === action.payload.id);
+        if (item) {
+          item.quantity = action.payload.quantity;
       }
     },
 
@@ -61,7 +68,7 @@ const grocerySlice = createSlice({
     clearPurchased: (state) => {
     },
   },
-);
+});
 
 export const {
   addItem,

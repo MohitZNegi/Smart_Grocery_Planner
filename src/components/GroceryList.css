@@ -1,6 +1,40 @@
-.grocery-list .panel{display:flex;flex-direction:column;gap:10px;padding:12px;border-radius:12px}
-.grocery-list .muted{color:var(--muted)}
-.grocery-list .items{display:flex;flex-direction:column;gap:10px;margin-top:8px}
-.grocery-list .item{display:flex;align-items:center;justify-content:space-between;padding:10px;border-radius:10px}
-.grocery-list .item .meta{font-size:14px;color:var(--muted)}
-.grocery-list .item .price{font-weight:700;color:var(--primary)}
+.grocery-list {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9));
+  padding: 24px;
+  border-radius: var(--radius-clay);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.12), -8px -8px 20px rgba(255, 255, 255, 0.8);
+}
+
+.grocery-list h2 {
+  margin: 0 0 20px 0;
+  color: var(--accent);
+  font-size: 1.3rem;
+}
+
+.grocery-list.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  text-align: center;
+}
+
+.grocery-list.empty p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.items-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.no-items-message {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 1rem;
+  padding: 20px;
+  margin: 0;
+}
