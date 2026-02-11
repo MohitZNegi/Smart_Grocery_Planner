@@ -1,9 +1,15 @@
 import React from "react";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 import Index from "./components/Index";
 import "./index.css";
 
 function App() {
-  return <Index />;
+  return (
+    <Provider store={store}>
+      <Index />
+    </Provider>
+  );
 }
 
 export default App;

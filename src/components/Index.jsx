@@ -1,10 +1,10 @@
 import React from "react";
 import Header from "./Header";
-import AddItemForm from "./AddItemForm";
 import CategoryFilter from "./CategoryFilter";
 import GroceryList from "./GroceryList";
 import BudgetSummary from "./BudgetSummary";
 import Insights from "./Insights";
+import AddGroceryForm from "./AddGroceryForm";
 
 const Index = () => {
   return (
@@ -12,7 +12,7 @@ const Index = () => {
       <Header />
       <main className="container" style={{ padding: 20 }}>
         <section>
-          <AddItemForm />
+          <AddGroceryForm />
         </section>
 
         <section style={{ marginTop: 20 }}>
