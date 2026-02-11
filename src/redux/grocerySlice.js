@@ -2,7 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   items: [],
-  filter: "ALL",
+  filters: {
+    status: "ALL",
+    category: "ALL",
+  },
   budget: 200,
 };
 
@@ -52,20 +55,24 @@ const grocerySlice = createSlice({
       }
     },
 
-    // Set filter
+        // Set filter (status and/or category)
     setFilter: (state, action) => {
+      state.filters = { ...state.filters, ...action.payload };
     },
 
     // Set budget
     setBudget: (state, action) => {
+      state.budget = action.payload;
     },
 
     // Clear all items
     clearItems: (state) => {
+      state.items = [];
     },
 
     // Clear purchased items
     clearPurchased: (state) => {
+      state.items = state.items.filter((item) => !item.isPurchased);
     },
   },
 });

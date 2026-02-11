@@ -12,14 +12,7 @@ const AddGroceryForm = () => {
     quantity: 1,
   });
 
-  const categories = [
-    "Vegetables",
-    "Fruits",
-    "Dairy",
-    "Meat",
-    "Groceries",
-    "Other",
-  ];
+  const categories = ["Vegetables", "Fruits", "Dairy", "Meat", "Other"];
 
   const handleChange = (e) => {
     const { name, value } = e.target;
