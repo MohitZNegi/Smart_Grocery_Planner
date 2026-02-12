@@ -8,7 +8,7 @@
   border-radius: var(--radius-clay);
   border: 1px solid rgba(0, 0, 0, 0.03);
   box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.12), -8px -8px 20px rgba(255, 255, 255, 0.8);
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 .budget-summary h2 {
@@ -104,8 +104,121 @@
   box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.08);
 }
 
+@media (max-width: 1024px) {
+  .budget-summary {
+    padding: 20px;
+  }
+
+  .budget-summary h2 {
+    font-size: 1.2rem;
+  }
+
+  .summary-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+
+  .summary-card .amount {
+    font-size: 1.6rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .budget-summary {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .budget-summary h2 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+
   .summary-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .summary-card {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .summary-card h3 {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+
+  .summary-card .amount {
+    font-size: 1.4rem;
+  }
+
+  .progress-label span {
+    font-size: 0.9rem;
+  }
+
+  .progress-bar {
+    height: 10px;
+  }
+
+  .alert {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .budget-summary {
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+  }
+
+  .budget-summary h2 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .summary-card {
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .summary-card h3 {
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+  }
+
+  .summary-card .amount {
+    font-size: 1.3rem;
+  }
+
+  .budget-progress {
+    margin-bottom: 12px;
+  }
+
+  .progress-label {
+    margin-bottom: 6px;
+  }
+
+  .progress-label span {
+    font-size: 0.8rem;
+  }
+
+  .progress-bar {
+    height: 8px;
+    border-radius: 8px;
+  }
+
+  .alert {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+    margin-top: 8px;
   }
 }

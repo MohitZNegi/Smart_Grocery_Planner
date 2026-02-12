@@ -147,19 +147,82 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .grocery-item {
+    grid-template-columns: auto 1fr auto;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .item-quantity,
+  .item-total {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .grocery-item {
     grid-template-columns: auto 1fr auto;
     gap: 12px;
     padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+  }
+
+  .item-name {
+    font-size: 0.95rem;
   }
 
   .item-category {
     display: none;
   }
 
+  .item-price {
+    font-size: 0.85rem;
+  }
+
   .item-quantity,
   .item-total {
     display: none;
+  }
+
+  .remove-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grocery-item {
+    grid-template-columns: auto 1fr 28px;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+  }
+
+  .item-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+
+  .item-details {
+    gap: 2px;
+  }
+
+  .item-name {
+    font-size: 0.9rem;
+  }
+
+  .item-price {
+    font-size: 0.8rem;
+  }
+
+  .remove-btn {
+    width: 24px;
+    height: 24px;
+    font-size: 0.9rem;
+    border-radius: 6px;
   }
 }

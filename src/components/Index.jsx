@@ -5,29 +5,36 @@ import GroceryList from "./GroceryList";
 import BudgetSummary from "./BudgetSummary";
 import Insights from "./Insights";
 import AddGroceryForm from "./AddGroceryForm";
+import Footer from "./Footer";
 
 const Index = () => {
   return (
-    <div>
+    <div className="app">
       <Header />
-      <main className="container" style={{ padding: 20 }}>
-        <section>
-          <AddGroceryForm />
-        </section>
+      <main className="app-main">
+        <div className="container">
+          {/* Left Column: Form & Filters */}
+          <div className="left-column">
+            <section className="form-section">
+              <AddGroceryForm />
+            </section>
 
-        <section style={{ marginTop: 20 }}>
-          <CategoryFilter />
-        </section>
+            <section className="insights-section">
+              <BudgetSummary />
+              <Insights />
+            </section>
+          </div>
 
-        <section style={{ marginTop: 20 }}>
-          <GroceryList />
-        </section>
-
-        <aside style={{ marginTop: 30 }}>
-          <BudgetSummary />
-          <Insights />
-        </aside>
+          {/* Right Column: Grocery List */}
+          <div className="right-column">
+            <section className="list-section">
+              <CategoryFilter />
+              <GroceryList />
+            </section>
+          </div>
+        </div>
       </main>
+      <Footer />
     </div>
   );
 };

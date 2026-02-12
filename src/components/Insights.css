@@ -16,10 +16,7 @@
   transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
-.insights-panel:hover {
-  transform: translateY(-4px);
-  box-shadow: 12px 12px 28px rgba(0, 0, 0, 0.14), -8px -8px 20px rgba(255, 255, 255, 0.9);
-}
+
 
 .insights h3 {
   font-size: 1.2rem;
@@ -66,16 +63,95 @@
   font-weight: 700;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .insights-panel {
-    padding: 16px;
+    padding: 18px;
+    margin-top: 14px;
   }
 
   .insights h3 {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+    margin-bottom: 14px;
+  }
+
+  .insights-grid {
+    gap: 10px;
+  }
+
+  .insight-item {
+    padding: 11px;
+  }
+
+  .insight-label {
+    font-size: 0.8rem;
   }
 
   .insight-value {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .insights-panel {
+    padding: 14px;
+    margin-top: 12px;
+    border-radius: 12px;
+  }
+
+  .insights h3 {
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+  }
+
+  .insights-grid {
+    gap: 8px;
+  }
+
+  .insight-item {
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .insight-label {
+    font-size: 0.75rem;
+    margin-bottom: 3px;
+  }
+
+  .insight-value {
+    font-size: 1rem;
+    margin-top: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .insights-panel {
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+
+  .insights h3 {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  .insights-grid {
+    gap: 6px;
+  }
+
+  .insight-item {
+    padding: 8px;
+    border-radius: 8px;
+  }
+
+  .insight-label {
+    font-size: 0.7rem;
+    margin-bottom: 2px;
+    letter-spacing: 0.3px;
+  }
+
+  .insight-value {
+    font-size: 0.95rem;
+    margin-top: 3px;
   }
 }

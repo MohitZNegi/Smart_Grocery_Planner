@@ -4,14 +4,11 @@
   border-radius: var(--radius-clay);
   border: 1px solid rgba(0, 0, 0, 0.03);
   box-shadow: var(--shadow-dark), var(--shadow-light);
-  margin-bottom: 20px;
+  margin-bottom: 0;
   transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
-.grocery-form:hover {
-  transform: translateY(-6px);
-  box-shadow: 14px 14px 36px rgba(0, 0, 0, 0.14), -10px -10px 24px rgba(255, 255, 255, 0.85);
-}
+
 
 .grocery-form h2 {
   margin: 0 0 20px 0;
@@ -82,8 +79,86 @@
   transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .grocery-form {
+    padding: 20px;
+  }
+
+  .grocery-form h2 {
+    font-size: 1.3rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
   .form-row {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .grocery-form {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .grocery-form h2 {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 12px 12px;
+    font-size: 16px;
+  }
+
+  .submit-btn {
+    padding: 12px 18px;
+    font-size: 1rem;
+    margin-top: 8px;
+  }
+
+  .form-row {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grocery-form {
+    padding: 14px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+  }
+
+  .grocery-form h2 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 10px 10px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+  .submit-btn {
+    padding: 10px 14px;
+    font-size: 0.95rem;
   }
 }

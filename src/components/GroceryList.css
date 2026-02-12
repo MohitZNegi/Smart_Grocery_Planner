@@ -4,12 +4,16 @@
   border-radius: var(--radius-clay);
   border: 1px solid rgba(0, 0, 0, 0.03);
   box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.12), -8px -8px 20px rgba(255, 255, 255, 0.8);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .grocery-list h2 {
-  margin: 0 0 20px 0;
+  margin: 0 0 16px 0;
   color: var(--accent);
   font-size: 1.3rem;
+  flex-shrink: 0;
 }
 
 .grocery-list.empty {
@@ -29,6 +33,9 @@
 .items-container {
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+  min-height: 0;
+  padding-right: 4px;
 }
 
 .no-items-message {
@@ -37,4 +44,59 @@
   font-size: 1rem;
   padding: 20px;
   margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .grocery-list {
+    padding: 20px;
+  }
+
+  .grocery-list h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .grocery-list {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .grocery-list h2 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+
+  .grocery-list.empty {
+    min-height: 250px;
+  }
+
+  .grocery-list.empty p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grocery-list {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .grocery-list h2 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .grocery-list.empty {
+    min-height: 200px;
+  }
+
+  .grocery-list.empty p {
+    font-size: 0.95rem;
+  }
+
+  .no-items-message {
+    padding: 16px;
+    font-size: 0.9rem;
+  }
 }

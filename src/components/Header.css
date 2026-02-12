@@ -1,10 +1,159 @@
 /* Header component styles */
-.site-header{
+.site-header {
   padding: 12px 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9));
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
 }
-.header-inner{display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;align-items:center;gap:12px}
-.logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(180deg,var(--primary), #ff9b4a);box-shadow:inset -4px -4px 8px rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
-.site-title{font-size:18px;font-weight:700}
-.cart{display:flex;align-items:center;gap:8px}
-.cart .cart-count{background:var(--accent);color:white;border-radius:999px;padding:4px 7px;font-size:12px;font-weight:700}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, var(--primary), #ff9b4a);
+  box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.site-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.cart .cart-count {
+  background: var(--accent);
+  color: white;
+  border-radius: 999px;
+  padding: 4px 7px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .site-header {
+    padding: 10px 0;
+  }
+
+  .header-inner {
+    gap: 14px;
+  }
+
+  .logo {
+    width: 42px;
+    height: 42px;
+  }
+
+  .site-title {
+    font-size: 16px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .app-header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 8px 0;
+  }
+
+  .header-inner {
+    gap: 12px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+  }
+
+  .site-title {
+    font-size: 16px;
+  }
+
+  .app-main {
+    padding: 20px 16px;
+  }
+
+  .app-header {
+    padding: 30px 16px;
+  }
+
+  .app-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .app-header p {
+    font-size: 1rem;
+  }
+
+  .container {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    padding: 8px 0;
+  }
+
+  .header-inner {
+    gap: 8px;
+  }
+
+  .logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+  }
+
+  .site-title {
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .cart {
+    gap: 6px;
+  }
+
+  .cart .cart-count {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+}
