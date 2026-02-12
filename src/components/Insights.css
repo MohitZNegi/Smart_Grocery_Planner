@@ -1,4 +1,81 @@
-.insights .panel{max-width:380px;padding:12px;border-radius:12px;border:1px solid rgba(0,0,0,0.03);background:linear-gradient(180deg,rgba(255,255,255,0.6),rgba(255,255,255,0.9))}
-.insights h3{font-size:16px}
-.insights p{color:var(--muted)}
-.insights .placeholder-chart{height:120px;background:linear-gradient(180deg,rgba(0,0,0,0.02),rgba(0,0,0,0.01));border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+/* Insights component styles */
+.insights {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.insights-panel {
+  max-width: 100%;
+  padding: 20px;
+  margin-top: 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9));
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.12), -8px -8px 20px rgba(255, 255, 255, 0.8);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.insights-panel:hover {
+  transform: translateY(-4px);
+  box-shadow: 12px 12px 28px rgba(0, 0, 0, 0.14), -8px -8px 20px rgba(255, 255, 255, 0.9);
+}
+
+.insights h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 16px 0;
+  letter-spacing: 0.3px;
+}
+
+.insights-grid {
+  margin-top: 12px;
+  display: grid;
+  gap: 12px;
+}
+
+.insight-item {
+  padding: 12px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  border-radius: 10px;
+  border: 1px solid rgba(255, 122, 24, 0.1);
+  transition: all 160ms ease;
+}
+
+.insight-item:hover {
+  border-color: rgba(255, 122, 24, 0.3);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+  transform: translateY(-2px);
+}
+
+.insight-label {
+  margin: 0 0 4px 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.insight-value {
+  display: block;
+  margin-top: 6px;
+  font-size: 1.2rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .insights-panel {
+    padding: 16px;
+  }
+
+  .insights h3 {
+    font-size: 1.1rem;
+  }
+
+  .insight-value {
+    font-size: 1.1rem;
+  }
+}
