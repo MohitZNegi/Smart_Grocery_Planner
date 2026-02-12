@@ -4,7 +4,7 @@ import {
   removeItem,
   togglePurchased,
   updateQuantity,
-} from "../redux/GrocerySlice";
+} from "../redux/grocerySlice";
 import "./GroceryItem.css";
 
 const GroceryItem = ({ item }) => {

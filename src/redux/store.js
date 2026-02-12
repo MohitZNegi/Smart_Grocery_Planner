@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import groceryReducer from "./GrocerySlice";
+import groceryReducer from "./grocerySlice";
 export const store = configureStore({
   reducer: {
     grocery: groceryReducer,

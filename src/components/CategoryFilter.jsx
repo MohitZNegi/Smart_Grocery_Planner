@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setFilter, clearPurchased } from "../redux/GrocerySlice";
+import { setFilter, clearPurchased } from "../redux/grocerySlice";
 import "./CategoryFilter.css";
 
 const CategoryFilter = () => {
@@ -50,6 +50,7 @@ const CategoryFilter = () => {
           >
             <option value="ALL">All Categories</option>
             <option value="Vegetables">Vegetables</option>
+            <option value="Fruits">Fruits</option>
             <option value="Dairy">Dairy</option>
             <option value="Snacks">Snacks</option>
             <option value="Household">Household</option>
